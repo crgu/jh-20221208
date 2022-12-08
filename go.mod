@@ -1,4 +1,4 @@
-module github.com/alibabacloud-go/cr-20181201/v2
+module github.com/crgu/jh-20221208/v0.0.1
 
 go 1.15
 
