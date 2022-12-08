@@ -9518,6 +9518,180 @@ func (s *ListRepoSyncTaskResponse) SetBody(v *ListRepoSyncTaskResponseBody) *Lis
 	return s
 }
 
+//start1
+
+type GetRepoTagsRequest struct {
+	RepoNamespace *string `json:"repo_namespace,omitempty" xml:"InstanceId,omitempty"`
+	PageNo        *int32  `json:"page_no,omitempty" xml:"PageNo,omitempty"`
+	PageSize      *int32  `json:"page_size,omitempty" xml:"PageSize,omitempty"`
+	RepoName      *string `json:"repo_name,omitempty" xml:"RepoId,omitempty"`
+}
+
+func (s GetRepoTagsRequest) String() string {
+	return tea.Prettify(s)
+}
+
+func (s GetRepoTagsRequest) GoString() string {
+	return s.String()
+}
+
+func (s *GetRepoTagsRequest) SetRepoNamespace(v string) *GetRepoTagsRequest {
+	s.RepoNamespace = &v
+	return s
+}
+
+func (s *GetRepoTagsRequest) SetPageNo(v int32) *GetRepoTagsRequest {
+	s.PageNo = &v
+	return s
+}
+
+func (s *GetRepoTagsRequest) SetPageSize(v int32) *GetRepoTagsRequest {
+	s.PageSize = &v
+	return s
+}
+
+func (s *GetRepoTagsRequest) SetRepoName(v string) *GetRepoTagsRequest {
+	s.RepoName = &v
+	return s
+}
+
+type GetRepoTagsResponseBody struct {
+	Code       *string                          `json:"code,omitempty" xml:"Code,omitempty"`
+	Images     []*GetRepoTagsResponseBodyImages `json:"images,omitempty" xml:"Images,omitempty" type:"Repeated"`
+	IsSuccess  *bool                            `json:"isSuccess,omitempty" xml:"IsSuccess,omitempty"`
+	PageNo     *int32                           `json:"page_no,omitempty" xml:"PageNo,omitempty"`
+	PageSize   *int32                           `json:"page_size,omitempty" xml:"PageSize,omitempty"`
+	RequestId  *string                          `json:"request_ID,omitempty" xml:"RequestId,omitempty"`
+	TotalCount *string                          `json:"total_count,omitempty" xml:"TotalCount,omitempty"`
+}
+
+func (s GetRepoTagsResponseBody) String() string {
+	return tea.Prettify(s)
+}
+
+func (s GetRepoTagsResponseBody) GoString() string {
+	return s.String()
+}
+
+func (s *GetRepoTagsResponseBody) SetCode(v string) *GetRepoTagsResponseBody {
+	s.Code = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetImages(v []*GetRepoTagsResponseBodyImages) *GetRepoTagsResponseBody {
+	s.Images = v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetIsSuccess(v bool) *GetRepoTagsResponseBody {
+	s.IsSuccess = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetPageNo(v int32) *GetRepoTagsResponseBody {
+	s.PageNo = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetPageSize(v int32) *GetRepoTagsResponseBody {
+	s.PageSize = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetRequestId(v string) *GetRepoTagsResponseBody {
+	s.RequestId = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBody) SetTotalCount(v string) *GetRepoTagsResponseBody {
+	s.TotalCount = &v
+	return s
+}
+
+type GetRepoTagsResponseBodyImages struct {
+	Digest      *string `json:"digest,omitempty" xml:"Digest,omitempty"`
+	ImageCreate *string `json:"image_create,omitempty" xml:"ImageCreate,omitempty"`
+	ImageId     *string `json:"image_ID,omitempty" xml:"ImageId,omitempty"`
+	ImageSize   *int64  `json:"image_size,omitempty" xml:"ImageSize,omitempty"`
+	ImageUpdate *string `json:"image_update,omitempty" xml:"ImageUpdate,omitempty"`
+	Status      *string `json:"status,omitempty" xml:"Status,omitempty"`
+	Tag         *string `json:"tag,omitempty" xml:"Tag,omitempty"`
+}
+
+func (s GetRepoTagsResponseBodyImages) String() string {
+	return tea.Prettify(s)
+}
+
+func (s GetRepoTagsResponseBodyImages) GoString() string {
+	return s.String()
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetDigest(v string) *GetRepoTagsResponseBodyImages {
+	s.Digest = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetImageCreate(v string) *GetRepoTagsResponseBodyImages {
+	s.ImageCreate = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetImageId(v string) *GetRepoTagsResponseBodyImages {
+	s.ImageId = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetImageSize(v int64) *GetRepoTagsResponseBodyImages {
+	s.ImageSize = &v
+	return s
+}
+
+func (s *ListRepoTagResponseBodyImages) SetImageUpdate(v string) *ListRepoTagResponseBodyImages {
+	s.ImageUpdate = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetStatus(v string) *GetRepoTagsResponseBodyImages {
+	s.Status = &v
+	return s
+}
+
+func (s *GetRepoTagsResponseBodyImages) SetTag(v string) *GetRepoTagsResponseBodyImages {
+	s.Tag = &v
+	return s
+}
+
+type GetRepoTagsResponse struct {
+	Headers    map[string]*string       `json:"headers,omitempty" xml:"headers,omitempty" require:"true"`
+	StatusCode *int32                   `json:"statusCode,omitempty" xml:"statusCode,omitempty" require:"true"`
+	Body       *GetRepoTagsResponseBody `json:"body,omitempty" xml:"body,omitempty" require:"true"`
+}
+
+func (s GetRepoTagsResponse) String() string {
+	return tea.Prettify(s)
+}
+
+func (s GetRepoTagsResponse) GoString() string {
+	return s.String()
+}
+
+func (s *GetRepoTagsResponse) SetHeaders(v map[string]*string) *GetRepoTagsResponse {
+	s.Headers = v
+	return s
+}
+
+func (s *GetRepoTagsResponse) SetStatusCode(v int32) *GetRepoTagsResponse {
+	s.StatusCode = &v
+	return s
+}
+
+func (s *GetRepoTagsResponse) SetBody(v *GetRepoTagsResponseBody) *GetRepoTagsResponse {
+	s.Body = v
+	return s
+}
+
+//end1
+
 type ListRepoTagRequest struct {
 	InstanceId *string `json:"InstanceId,omitempty" xml:"InstanceId,omitempty"`
 	PageNo     *int32  `json:"PageNo,omitempty" xml:"PageNo,omitempty"`
@@ -15542,6 +15716,62 @@ func (client *Client) ListRepoTagScanResultWithOptions(request *ListRepoTagScanR
 		return _result, _err
 	}
 	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+func (client *Client) GetRepoTagsWithOptions(request *GetRepoTagsRequest, runtime *util.RuntimeOptions) (_result *ListRepoTagResponse, _err error) {
+	_err = util.ValidateModel(request)
+	if _err != nil {
+		return _result, _err
+	}
+	query := map[string]interface{}{}
+	if !tea.BoolValue(util.IsUnset(request.RepoNamespace)) {
+		query["RepoNamespace"] = request.RepoNamespace
+	}
+
+	if !tea.BoolValue(util.IsUnset(request.PageNo)) {
+		query["PageNo"] = request.PageNo
+	}
+
+	if !tea.BoolValue(util.IsUnset(request.PageSize)) {
+		query["PageSize"] = request.PageSize
+	}
+
+	if !tea.BoolValue(util.IsUnset(request.RepoName)) {
+		query["RepoName"] = request.RepoName
+	}
+
+	req := &openapi.OpenApiRequest{
+		Query: openapiutil.Query(query),
+	}
+	params := &openapi.Params{
+		Action:      tea.String("GetRepoTags"),
+		Version:     tea.String("2018-12-01"),
+		Protocol:    tea.String("HTTPS"),
+		Pathname:    tea.String("/"),
+		Method:      tea.String("POST"),
+		AuthType:    tea.String("AK"),
+		Style:       tea.String("RPC"),
+		ReqBodyType: tea.String("formData"),
+		BodyType:    tea.String("json"),
+	}
+	_result = &GetRepoTagsResponse{}
+	_body, _err := client.CallApi(params, req, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_err = tea.Convert(_body, &_result)
+	return _result, _err
+}
+
+func (client *Client) GetRepoTags(request *GetRepoTagsRequest) (_result *GetRepoTagsResponse, _err error) {
+	runtime := &util.RuntimeOptions{}
+	_result = &GetRepoTagsResponse{}
+	_body, _err := client.GetRepoTagsWithOptions(request, runtime)
+	if _err != nil {
+		return _result, _err
+	}
+	_result = _body
 	return _result, _err
 }
 
