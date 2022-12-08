@@ -15719,7 +15719,7 @@ func (client *Client) ListRepoTagScanResultWithOptions(request *ListRepoTagScanR
 	return _result, _err
 }
 
-func (client *Client) GetRepoTagsWithOptions(request *GetRepoTagsRequest, runtime *util.RuntimeOptions) (_result *ListRepoTagResponse, _err error) {
+func (client *Client) GetRepoTagsWithOptions(request *GetRepoTagsRequest, runtime *util.RuntimeOptions) (_result *GetRepoTagsResponse, _err error) {
 	_err = util.ValidateModel(request)
 	if _err != nil {
 		return _result, _err
