@@ -1,4 +1,4 @@
-module github.com/crgu/jh-20221208/v0.0.3
+module github.com/crgu/jh-20221208
 
 go 1.15
 
